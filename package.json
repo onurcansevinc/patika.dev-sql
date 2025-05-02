@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dock:build": "docker-compose --env-file .env up --build",
+    "dock:up": "docker-compose --env-file .env up",
+    "dock:hard-reset": "docker-compose down --volumes --remove-orphans && npm run dock:build"
+  }
+}
