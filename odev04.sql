@@ -20,12 +20,11 @@ SELECT DISTINCT replacement_cost FROM film;
 /*
   film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
 */
-SELECT DISTINCT COUNT(replacement_cost) FROM film;
-
+SELECT COUNT(DISTINCT replacement_cost) FROM film;
 /*
   film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
 */
-SELECT COUNT(title) FROM film WHERE titlef LIKE 'T%' AND rating='G';
+SELECT COUNT(title) FROM film WHERE title LIKE 'T%' AND rating='G';
 
 /*
   country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
